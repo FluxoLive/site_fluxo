@@ -4,8 +4,20 @@
 }
 footer.main-footer {
   padding: 3rem 0;
-  background: #eee;
-  color: #aaa;
+  background-image: linear-gradient(to bottom, #fff 0%, #eee 50%, #ccc 100%);
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #fff 0%,
+    #eee 50%,
+    #ccc 100%
+  );
+  background-image: -moz-linear-gradient(
+    to bottom,
+    #fff 0%,
+    #eee 50%,
+    #ccc 100%
+  );
+  color: #2f2f2f;
   padding-bottom: 0;
 }
 .footer-logo {
@@ -20,17 +32,17 @@ nav.navbar.active {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {
-  color: #999;
+  color: #2f2f2f;
   text-decoration: none;
 }
 .modal-content .close {
-  background: #000;
+  background: #2f2f2f;
 }
 .btn-gradient {
   padding: 10px 20px;
   text-align: center;
   transition: 0.3s;
-  background-size: auto 200%;
+  background-size: 200% auto;
   color: #eeeeee;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 20px #eee;
@@ -38,15 +50,15 @@ nav.navbar.active {
 }
 
 .btn-gradient:hover {
-  background-position: bottom center;
+  background-position: right center;
   color: #fff;
 }
 
 .btn-gradient {
   background-image: linear-gradient(
-    to bottom,
-    #009fc8 0%,
-    #03ff94 50%,
-    #009fc8 100%
+    to right,
+    #42c88b 0%,
+    #56c1ff 51%,
+    #42c88b 100%
   );
 }
