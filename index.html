@@ -12,11 +12,14 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <!-- Google fonts - Poppins-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Lightbox-->
     <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.css">
     <!-- Custom font icons-->
     <link rel="stylesheet" href="css/fontastic.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.sea.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -30,7 +33,7 @@
   <body>
 
         <!-- Login Modal-->
-    <div id="login" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
+    <div id="register" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
       <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
@@ -61,23 +64,110 @@
       <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h6>Seja um parceiro</h6>
+            <h6>Parceiros Fluxo</h6>
             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
           </div>
           <div class="modal-body p-4 p-lg-5">
-            <form action="#" class="login-form text-left">
-              <div class="form-group mb-4">
-                <label>Email address</label>
-                <input type="email" name="email" placeholder="name@company.com" class="form-control">
+            <div class="container">
+              <div class="row text-center">
+                <div class="col-12">
+                  <h3> <strong>Como Funciona?</strong> </h3>
+                  <p class="lead text-muted my-3">
+                    Você revende ou indica Fluxo para as empresas e recebe comissão para cada contrato fechado.
+                  </p>
+                </div>
+                <div class="col-12 mt-5">
+                  <h3> <strong>Veja os modelos de parceria</strong> </h3>
+                  <div class="row">
+                    <div class="col-4">
+                      <img src="img/icone-parceiro-embaixador.png" class="img-fluid m-4" width="128px">
+                      <p> <strong> Embaixador </strong> </p>
+                      <p class="lead">
+                        Indique contatos de possíveis clientes e <strong>seja comissionado</strong> sobre cada venda.
+                      </p> 
+                        <a class="btn btn-link" data-toggle="collapse" href="#collapseEmbaixador" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          + Detalhes
+                        </a>
+                        <div class="collapse" id="collapseEmbaixador">
+                          <ol class="text-left">
+                            <li>Conecte empresas com a Fluxo</li>
+                            <li>Percentual sobre a venda fechada.</li>
+                            <li>Conte com a nossa equipe para negociar e concluir a venda. </li>
+                            <li>Ideal para pessoas com amplo networking e conhecimento comercial.</li>
+                          </ol>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="img/icone-parceiro-especialista.png" class="img-fluid m-4" width="128px">
+                      <p> <strong> Especialista </strong> </p>
+                      <p class="lead">
+                        Utilize o Fluxo para obter resultados e <strong>receita recorrente.</strong>
+                      </p>
+                        <a class="btn btn-link" data-toggle="collapse" href="#collapseEspecialista" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          + Detalhes
+                        </a>
+                        <div class="collapse" id="collapseEspecialista">
+                          <ol class="text-left">
+                            <li>Você e sua equipe executam o processo de venda</li>
+                            <li>Descontos especiais e percentual contínuo sobre cada plano fechado. </li>
+                            <li>Conte com a nossa equipe para obter maiores resultados em seus clientes. </li>
+                            <li>Plataforma exclusiva para gestão de seus clientes ativos. </li>
+                            <li>Ideal para empresas ou consultores e especialistas de RH que desejam ampliar sua carteira de serviços e clientes.</li>
+                          </ol>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="img/icone-parceiro-whitelabel.png" class="img-fluid m-4" width="128px">
+                      <p> <strong> White Label </strong> </p>
+                      <p class="lead">
+                        Revenda o Fluxo com a <strong>sua própria marca</strong> e se torne uma referência.
+                      </p>
+                      <a class="btn btn-link" data-toggle="collapse" href="#collapseWhiteLabel" role="button" aria-expanded="false" aria-controls="collapseExample">
+                         + Detalhes
+                      </a>
+                      <div class="collapse" id="collapseWhiteLabel">
+                        <ol class="text-left">
+                          <li>Acesso à uma ferramenta líder de mercado, com direitos exclusivos para revender com a sua própria marca. </li>
+                          <li>Descontos especiais e receita recorrente. </li>
+                          <li>Plataforma exclusiva para gestão de seus clientes ativos. </li>
+                          <li>Ideal para empresas consolidadas no mercado que desejam ampliar sua carteira de serviços e clientes.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <form action="#" class="login-form text-left">
+                      <div class="form-row mb-4">
+                        <div class="col-12 col-md-6 mb-3">
+                          <label>Nome</label>
+                          <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label>E-mail</label>
+                          <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label>Telefone (Celular): </label>
+                          <input type="text" name="phone" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label>Modelo de Parceria</label>
+                          <select name="model" required class="form-control input-lg">
+                            <option selected>Selecione um modelo</option>
+                            <option value="Embaixador">Embaixador</option>
+                            <option value="Especialista">Especialista</option>
+                            <option value="White Label">White Label</option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-gradient"> Enviar </button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
               </div>
-              <div class="form-group mb-4">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Min 8 characters" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-gradient">
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -104,16 +194,18 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <h2 class="hero-heading mb-0">
-              <strong>Felicidade = Rentabilidade</strong> 
+              <strong>O Futuro do trabalho é Humano.</strong> 
             </h2>
             <div class="row">
               <div class="col-lg-10">
                 <p class="lead text-muted mt-4 mb-4">
-                  Eleve o engajamento e a produtividade da sua equipe tendo o fluxo como estratégia.
+                  Elimine as barreiras que impedem sua empresa de crescer. Colaboradores engajados são 3x mais produtivos, 7x mais inovadores e 4x mais “presentes" (menos 40% em taxas de rotatividade). 
+                  <br/> <br/>
+                  A Fluxo é uma ferramenta simples que ajuda você, gestor, a gerir o seu maior patrimônio - sua equipe.
                 </p>
               </div>
             </div>
-            <a href="#" data-toggle="modal" data-target="#login" class="btn btn-gradient">Experimente Grátis</a>
+            <a href="#" data-toggle="modal" data-target="#register" class="btn btn-gradient btn-lg">Experimente por 30 dias</a>
           </div>
           <div class="col-lg-6"><img src="img/home-woman.png" alt="" class="hero-image img-fluid d-none d-lg-block"></div>
         </div>
