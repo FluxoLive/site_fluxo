@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Appton - Bootstrap 4 Template</title>
+    <title>Fluxo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -28,25 +28,13 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container"><a href="./" class="navbar-brand"><img src="img/fluxo-logo.png" alt="" class="img-fluid"></a>
-          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                  <li class="nav-item"> <a href="index.html" class="nav-link active" data-toggle="modal" data-target="#login">Adiquirir</a></li>
-            </ul>
-            <a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">Acessar</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Login Modal-->
+
+        <!-- Login Modal-->
     <div id="login" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
       <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
+            <h6>Comece a usar</h6>
             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
           </div>
           <div class="modal-body p-4 p-lg-5">
@@ -60,19 +48,64 @@
                 <input type="password" name="password" placeholder="Min 8 characters" class="form-control">
               </div>
               <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary">
+                <input type="submit" value="Login" class="btn btn-gradient">
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+        <!-- Parceiro Modal-->
+    <div id="parceiro" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
+      <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h6>Seja um parceiro</h6>
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body p-4 p-lg-5">
+            <form action="#" class="login-form text-left">
+              <div class="form-group mb-4">
+                <label>Email address</label>
+                <input type="email" name="email" placeholder="name@company.com" class="form-control">
+              </div>
+              <div class="form-group mb-4">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Min 8 characters" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-gradient">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="./" class="navbar-brand"><img src="img/fluxo-logo.png" alt="" class="img-fluid"></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"> <a href="index.html" class="nav-link active" data-toggle="modal" data-target="#parceiro">Seja um parceiro</a></li>
+            </ul>
+            <a href="#" data-toggle="modal" data-target="#login" class="btn btn-gradient navbar-btn ml-0 ml-lg-3">Acessar</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <!-- Hero Section-->
     <section class="hero">
       <div class="container mb-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h2 class="hero-heading mb-0">Felicidade = Rentabilidade</h2>
+            <h2 class="hero-heading mb-0">
+              <strong>Felicidade = Rentabilidade</strong> 
+            </h2>
             <div class="row">
               <div class="col-lg-10">
                 <p class="lead text-muted mt-4 mb-4">
@@ -80,14 +113,15 @@
                 </p>
               </div>
             </div>
-            <a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary">Experimente Grátis</a>
+            <a href="#" data-toggle="modal" data-target="#login" class="btn btn-gradient">Experimente Grátis</a>
           </div>
           <div class="col-lg-6"><img src="img/home-woman.png" alt="" class="hero-image img-fluid d-none d-lg-block"></div>
         </div>
       </div>
     </section>
+
     <!-- Intro Section-->
-    <section>
+    <section class="bg-light">
       <div class="container">
         <div class="text-center">
           <h2>Track projects from start to finish </h2>
@@ -171,7 +205,7 @@
       </div>
     </section>
     <!-- CLients Section-->
-    <section class="bg-gray">
+    <section class="bg-light">
       <div class="container">
         <div class="text-center">
           <h2>Trusted by teams everywhere</h2>
@@ -262,38 +296,18 @@
         </div>
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <div class="footer-logo"><img src="img/logo-footer.svg" alt="..." class="img-fluid"></div>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="footer-logo"><img src="img/fluxo-logo.png" alt="..." class="img-fluid"></div>
           </div>
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <h5 class="footer-heading">Site pages</h5>
-            <ul class="list-unstyled">
-              <li> <a href="index.html" class="footer-link">Home</a></li>
-              <li> <a href="faq.html" class="footer-link">FAQ</a></li>
-              <li> <a href="contact.html" class="footer-link">Contact</a></li>
-              <li> <a href="text.html" class="footer-link">Text Page</a></li>
-            </ul>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            olá@fluxo.io
           </div>
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <h5 class="footer-heading">Product</h5>
-            <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Why Appton?</a></li>
-              <li> <a href="#" class="footer-link">Enterprise</a></li>
-              <li> <a href="#" class="footer-link">Blog</a></li>
-              <li> <a href="#" class="footer-link">Pricing</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h5 class="footer-heading">Resources</h5>
-            <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Download</a></li>
-              <li> <a href="#" class="footer-link">Help Center</a></li>
-              <li> <a href="#" class="footer-link">Guides</a></li>
-              <li> <a href="#" class="footer-link">Partners</a></li>
-            </ul>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            (31) 9999-9999
           </div>
         </div>
       </div>
@@ -301,9 +315,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 text-center text-lg-left">
-              <p class="copyrights-text mb-3 mb-lg-0">&copy; All rights reserved. Appton.co. Design by <a href="https://bootstrapious.com/p/big-bootstrap-tutorial" class="external footer-link">Bootstrapious </a></p>
-              <!-- If you want to remove the backlink, please purchase a license for this template @ https://bootstrapious.com/attribution-free-license. Big thanks!-->
-              
+              <p class="copyrights-text mb-3 mb-lg-0">&copy; All rights reserved. fluxoapp.com.</p>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="list-inline social mb-0">
