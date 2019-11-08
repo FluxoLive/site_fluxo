@@ -75,10 +75,11 @@ $(function() {
     target: "#navbarSupportedContent",
     offset: 80
   });
+
   // =====================================================
-  //      SCROLL SPY
+  //      pulse botão
   // =====================================================
-  $(".btn").on("mouseover mouseout", function(e) {
+  $(".btn").on("mouseover mouseout", function() {
     $(this).toggleClass("animated pulse");
   });
 });
