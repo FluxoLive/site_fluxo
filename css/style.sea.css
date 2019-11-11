@@ -204,7 +204,7 @@ footer.main-footer {
 }
 
 .social-link:hover {
-  color: #fff;
+  color: #000;
 }
 
 .footer-heading {
@@ -261,8 +261,6 @@ STYLE SWITCHER FOR DEMO
 * =====================================================
 */
 .hero {
-  padding: 8rem 0;
-  background: url(../img/hero-bg.svg) no-repeat;
   background-size: cover;
   background-position: bottom left;
 }
