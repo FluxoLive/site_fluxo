@@ -173,13 +173,15 @@ nav.navbar.active {
   border: none;
   margin: 30px auto;
 }
-#fade-quote-carousel .profile-circle {
-  width: 100px;
-  height: 100px;
+#fade-quote-carousel .profile-circle img {
+  width: 150px;
   margin: 0 auto;
-  border-radius: 100px;
 }
-
+#fade-quote-carousel .profile-circle p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 .stepwizard-step p {
   margin-top: 10px;
 }
@@ -233,4 +235,16 @@ nav.navbar.active {
   border: 1px solid #eee;
   background-color: #f6f6f6;
   color: #ddd;
+}
+
+.carousel-item img {
+  max-width: 70%;
+  transition: all 0.5s;
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.carousel-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
