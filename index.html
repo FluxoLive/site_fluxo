@@ -207,7 +207,7 @@
                   </div>
                 </div>
                 <div class="col-12 mt-5">
-                    <form action="#" class="login-form text-left">
+                    <form id="#formParceiro" class="login-form text-left">
                       <div class="form-row mb-4">
                         <div class="col-12 col-md-6 mb-3">
                           <label>Nome</label>
@@ -231,7 +231,7 @@
                           </select>
                         </div>
                         <div class="col-12">
-                          <button type="submit" class="btn btn-gradient"> Enviar </button>
+                          <button type="submit" class="btn btn-gradient btn-block-mobile"> Enviar </button>
                         </div>
                       </div>
                     </form>
@@ -293,105 +293,95 @@
         <div class="row">
           <div class="col-12">
             <div id="clientsCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+              <ol class="carousel-indicators">
+                  <li data-target="#clientsCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#clientsCarousel" data-slide-to="1"></li>
+                  <li data-target="#clientsCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row text-center">
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/ative.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/bancosemear.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/bigcard.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/bomsamaritano.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/toodoo.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/unicred.png" alt="Image" >
+                              </a>
+                          </div>
+                      </div>
+                  </div>
 
-                        <ol class="carousel-indicators">
-                            <li data-target="#clientsCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#clientsCarousel" data-slide-to="1"></li>
-                            <li data-target="#clientsCarousel" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-
-                            <div class="carousel-item active">
-                                <div class="row text-center">
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/ative.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/bancosemear.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/bigcard.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/bomsamaritano.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/toodoo.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/unicred.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                </div>
-                                <!--.row-->
-                            </div>
-                            <!--.item-->
-
-                            <div class="carousel-item">
-                                <div class="row text-center">
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/bp.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/brio.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/inatel.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/oi.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/redehg.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                    <div class="col-md-2 mx-auto my-2 my-sm-0">
-                                        <a href="#">
-                                            <img src="img/clients/sicoob.png" alt="Image" >
-                                        </a>
-                                    </div>
-                                </div>
-                                <!--.row-->
-                              </div>
-                            </div>
-                            <!--.item-->
-
-                        </div>
-                        <!--.carousel-inner-->
-                    </div>
+                  <div class="carousel-item">
+                      <div class="row text-center">
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/bp.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/brio.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/inatel.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/oi.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/redehg.png" alt="Image" >
+                              </a>
+                          </div>
+                          <div class="col-md-2 mx-auto my-2 my-sm-0">
+                              <a href="#">
+                                  <img src="img/clients/sicoob.png" alt="Image" >
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Divider Section-->
     <section>
       <div class="container">
           <div class="row align-items-center">
             <div class="col-12 col-md-4 mx-auto">
               <h4> <strong>Equipes Fortes = Indivíduos Engajados</strong> </h4>
-              <p class="lead mt-4">Para desenvolver equipes fortes e obter resultados diferenciados, os gestores precisam contar com colaboradores engajados. A Fluxo utiliza dados simples e visuais que trazem assertividade e clareza no assunto, ajudando você a elevar a produtividade, a moral e "presenteísmo" dos colaboradores.</p>
+              <p class="lead mt-4">Para desenvolver equipes fortes e obter resultados diferenciados, os gestores precisam contar com colaboradores engajados. A Fluxo utiliza dados simples e visuais que trazem assertividade e clareza no assunto, ajudando você a elevar a produtividade, a moral e o "presenteísmo" dos colaboradores.</p>
             </div>
             <div class="col-12 col-md-8 mx-auto">
               <img src="img/sistema-primeiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
@@ -419,7 +409,7 @@
           <div class="row align-items-center">
             <div class="col-12 col-md-4 mx-auto">
               <h4> <strong>Transforme Gestores em Líderes</strong> </h4>
-              <p class="lead mt-4">Tome decisões mais assertivas contando com as nossas recomendações em AI (Inteligência Artiﬁcial). Trazemos algoritmos, metodologia e ações que abordam os principais desaﬁos dos gestores atuais.</p>
+              <p class="lead mt-4">Tome decisões mais assertivas contando com as nossas recomendações em AI (Inteligência Artiﬁcial). Oferecemos algoritmos, metodologia e ações que abordam os principais desaﬁos dos gestores atuais.</p>
             </div>
             <div class="col-12 col-md-8 mx-auto">
               <img src="img/sistema-terceiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
@@ -431,9 +421,9 @@
     <!-- CLients Section-->
     <section id="carousel" class="bg-light text-center">        			
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="quote"> <i class="fa fa-quote-left fa-3x mr-3"></i> <i class="fa fa-quote-right fa-3x"></i> </div>
             <div class="carousel slide carousel-fade" id="fade-quote-carousel" data-ride="carousel" data-interval="4000">
               <!-- Carousel indicators -->
               <ol class="carousel-indicators">
@@ -445,40 +435,43 @@
               <!-- Carousel items -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
+                  <blockquote>
+                    <p>Com a implantação do Fluxo, os nossos gestores passaram a ter dados para mensurar, acompanhar e agir nos fatores chaves que realmente elevam engajamento.</p>
+                  </blockquote>	
                   <div class="profile-circle">
                       <img src="img/clients/sicoob.png">
                       <p>Dennis Franco - Diretor de RH</p>
                   </div>
-                  <blockquote>
-                    <p>Com a implantação do Fluxo, os nossos gestores passaram a ter dados para mensurar, acompanhar e agir nos fatores chaves que realmente elevam engajamento.</p>
-                  </blockquote>	
                 </div>
                 <div class="carousel-item">
-                <div class="profile-circle">
-                  <img src="img/clients/brio.png">
-                  <p>Beatriz Santos - Diretora</p>
-                </div>
                   <blockquote>
                     <p>Eu nunca imaginei que poderia ter acesso a esse nível de informação em tão pouco tempo. Com menos de um dia - a equipe da Fluxo nos auxiliou na implantação, respondemos as pesquisas e minutos depois tínhamos um plano de ação claro e direcionado para os pontos que verdadeiramente importam para nossa equipe.</p>
                   </blockquote>
+                  <div class="profile-circle">
+                    <img src="img/clients/brio.png">
+                    <p>Beatriz Santos - Diretora</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                <div class="profile-circle">
-                  <img src="img/clients/redehg.png">
-                  <p>Fernando Gomes - Diretoria</p>
-                </div>
+                
                   <blockquote>
                     <p>Hoje, através da Fluxo, sabemos exatamente aonde focar os nossos esforços. Enxergamos uma conexão direta entre o engajamento da nossa equipe e a satisfação dos nossos clientes.</p>
                   </blockquote>
+                  <div class="profile-circle">
+                    <img src="img/clients/redehg.png">
+                    <p>Fernando Gomes - Diretoria</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
+                  
+                  <blockquote>
+                    <p>Antes da Fluxo, utilizávamos técnicas manuais, impressas e atrasadas de gestão de pessoas. Os resultados não apontavam para lugar nenhum. A equipe ficava frustrada. E a tão esperada "mudança" virou motivo de chacota.</p>
+                  </blockquote>
+
                   <div class="profile-circle">
                     <img src="img/clients/unicred.png">
                     <p>Daniel Lima - Gerência</p>
                   </div>
-                  <blockquote>
-                    <p>Antes da Fluxo, utilizávamos técnicas manuais, impressas e atrasadas de gestão de pessoas. Os resultados não apontavam para lugar nenhum. A equipe ficava frustrada. E a tão esperada "mudança" virou motivo de chacota.</p>
-                  </blockquote>
                 </div>
               </div>
             </div>
@@ -544,6 +537,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/lightbox2/js/lightbox.js"></script>
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
     <script src="js/front.js"></script>
   </body>
 </html>

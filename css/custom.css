@@ -241,7 +241,7 @@ nav.navbar.active {
   max-width: 70%;
   transition: all 0.5s;
   filter: grayscale(100%);
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .carousel-item img:hover {
