@@ -1,542 +1,414 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fluxo</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <!-- Google fonts - Poppins-->
-    <link href="//fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <!-- Lightbox-->
-    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.css">
-    <!-- Custom font icons-->
-    <link rel="stylesheet" href="css/fontastic.css">
+<!doctype html>
+<html lang="pt-BR">
 
-    <!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.sea.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fluxo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font Awesome CSS-->
+  <link href="//fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- Animate -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.sea.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon.png">
 
-        <!-- Login Modal-->
-    <div id="register" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
-      <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header border-bottom-0">
-            <h6>Comece a usar</h6>
-            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-          </div>
-          <div class="modal-body p-4 p-lg-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-12 d-none d-sm-block">
-                    <div class="process">
-                      <div class="process-row">
-                          <div class="process-step">
-                              <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-user fa-3x"></i></button>
-                              <p>Realize o cadastro de sua empresa.</p>
-                          </div>
-                          <div class="process-step">
-                              <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-comments-o fa-3x"></i></button>
-                              <p>Convide a sua equipe para participar.</p>
-                          </div>
-                          <div class="process-step">
-                              <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
-                              <p>Colaboradores respondem as pesquisas.</p>
-                          </div> 
-                          <div class="process-step">
-                              <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-eur fa-3x"></i></button>
-                              <p>Analise os resultados.</p>
-                          </div> 
-                      </div>
-                  </div>
-                </div>
-                <div class="col-12 mt-5 lead text-center">
-                  <p>Após o cadastro, você receberá um email de confirmação para iniciar sua experiência.</p>
-                  <p>Certifique-se de usar um e-mail empresarial e verificar seu spam.</p>
-                  <p>O processo de configuração dura menos de 15 minutos e você terá todo apoio via vídeos tutoriais ou suporte direto em caso de dúvidas.</p>
-                </div>
-                <div class="col-12 mt-5">
-                    <form action="#" class="login-form text-left">
-                      <div class="form-row mb-4">
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Empresa</label>
-                          <input type="text" name="name" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Responsável</label>
-                          <input type="text" name="name" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>E-mail</label>
-                          <input type="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>CNPJ</label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Cargo</label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Número de Colaboradores</label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Segmento</label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Telefone (Celular): </label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Senha </label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Confirmar Senha: </label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12">
-                          <button type="submit" class="btn btn-gradient btn-block-mobile"> Enviar </button>
-                          <a href="#" class="btn btn-link btn-block-mobile"> Já sou cadastrado </a>
-                        </div>
-                      </div>
-                    </form>
-                </div>
-              </div>
-            </div>
-          </div>
+</head>
+
+<body>
+
+  <!-- Login Modal-->
+  <div id="register" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
+    <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
-      </div>
-    </div>
-
-        <!-- Parceiro Modal-->
-    <div id="parceiro" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
-      <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header border-bottom-0">
-            <h6>Parceiros Fluxo</h6>
-            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-          </div>
-          <div class="modal-body p-4 p-lg-5">
-            <div class="container">
-              <div class="row text-center">
-                <div class="col-12">
-                  <h3> <strong>Como Funciona?</strong> </h3>
-                  <p class="lead text-muted my-3">
-                    Você revende ou indica Fluxo para as empresas e recebe comissão para cada contrato fechado.
-                  </p>
-                </div>
-                <div class="col-12 mt-5">
-                  <h3> <strong>Veja os modelos de parceria</strong> </h3>
-                  <div class="row">
-                    <div class="col-12 col-md-4">
-                      <img src="img/icone-parceiro-embaixador.png" class="img-fluid m-4" width="128px">
-                      <p> <strong> Embaixador </strong> </p>
-                      <p class="lead">
-                        Indique contatos de possíveis clientes e <strong>seja comissionado</strong> sobre cada venda.
-                      </p> 
-                        <a class="btn btn-link" data-toggle="collapse" href="#collapseEmbaixador" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          + Detalhes
-                        </a>
-                        <div class="collapse" id="collapseEmbaixador">
-                          <ol class="text-left">
-                            <li>Conecte empresas com a Fluxo</li>
-                            <li>Percentual sobre a venda fechada.</li>
-                            <li>Conte com a nossa equipe para negociar e concluir a venda. </li>
-                            <li>Ideal para pessoas com amplo networking e conhecimento comercial.</li>
-                          </ol>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                      <img src="img/icone-parceiro-especialista.png" class="img-fluid m-4" width="128px">
-                      <p> <strong> Especialista </strong> </p>
-                      <p class="lead">
-                        Utilize o Fluxo para obter resultados e <strong>receita recorrente.</strong>
-                      </p>
-                        <a class="btn btn-link" data-toggle="collapse" href="#collapseEspecialista" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          + Detalhes
-                        </a>
-                        <div class="collapse" id="collapseEspecialista">
-                          <ol class="text-left">
-                            <li>Você e sua equipe executam o processo de venda</li>
-                            <li>Descontos especiais e percentual contínuo sobre cada plano fechado. </li>
-                            <li>Conte com a nossa equipe para obter maiores resultados em seus clientes. </li>
-                            <li>Plataforma exclusiva para gestão de seus clientes ativos. </li>
-                            <li>Ideal para empresas ou consultores e especialistas de RH que desejam ampliar sua carteira de serviços e clientes.</li>
-                          </ol>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                      <img src="img/icone-parceiro-whitelabel.png" class="img-fluid m-4" width="128px">
-                      <p> <strong> White Label </strong> </p>
-                      <p class="lead">
-                        Revenda o Fluxo com a <strong>sua própria marca</strong> e se torne uma referência.
-                      </p>
-                      <a class="btn btn-link" data-toggle="collapse" href="#collapseWhiteLabel" role="button" aria-expanded="false" aria-controls="collapseExample">
-                         + Detalhes
-                      </a>
-                      <div class="collapse" id="collapseWhiteLabel">
-                        <ol class="text-left">
-                          <li>Acesso à uma ferramenta líder de mercado, com direitos exclusivos para revender com a sua própria marca. </li>
-                          <li>Descontos especiais e receita recorrente. </li>
-                          <li>Plataforma exclusiva para gestão de seus clientes ativos. </li>
-                          <li>Ideal para empresas consolidadas no mercado que desejam ampliar sua carteira de serviços e clientes.</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 mt-5">
-                    <form id="#formParceiro" class="login-form text-left">
-                      <div class="form-row mb-4">
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Nome</label>
-                          <input type="text" name="name" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>E-mail</label>
-                          <input type="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Telefone (Celular): </label>
-                          <input type="text" name="phone" class="form-control" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                          <label>Modelo de Parceria</label>
-                          <select name="model" required class="form-control input-lg">
-                            <option selected>Selecione um modelo</option>
-                            <option value="Embaixador">Embaixador</option>
-                            <option value="Especialista">Especialista</option>
-                            <option value="White Label">White Label</option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <button type="submit" class="btn btn-gradient btn-block-mobile"> Enviar </button>
-                        </div>
-                      </div>
-                    </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container"><a href="./" class="navbar-brand"><img src="img/fluxo-logo.png" alt="" class="img-fluid"></a>
-          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-ellipsis-v ml-2 fa-2x"></i></button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a href="#" class="btn btn-outline-dark btn-block-mobile" data-toggle="modal" data-target="#parceiro">Seja um parceiro</a>
-                  </li>
-                  <li class="nav-item mt-2 mt-sm-0 ">
-                    <a href="#" data-toggle="modal" data-target="#login" class="btn btn-gradient navbar-btn btn-block-mobile ml-0 ml-lg-3">Acessar</a>
-                  </li>
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Hero Section-->
-    <section class="hero">
-      <div class="container mb-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2 class="hero-heading mb-0">
-              <strong>O Futuro do trabalho é Humano.</strong> 
-            </h2>
+        <div class="modal-body p-2">
+          <div class="container">
             <div class="row">
-              <div class="col-lg-10">
-                <p class="lead text-muted mt-4 mb-4">
-                  Elimine as barreiras que impedem sua empresa de crescer. Colaboradores engajados são 3x mais produtivos, 7x mais inovadores e 4x mais “presentes" (menos 40% em taxas de rotatividade). 
-                  <br/> <br/>
-                  A Fluxo é uma ferramenta simples que ajuda você, gestor, a gerir o seu maior patrimônio - sua equipe.
+              <div class="col-12 lead text-center">
+                <p>
+                  Após o cadastro, nosso consultor entrará em contato. O processo de configuração dura menos de 15
+                  minutos e você terá todo apoio da nossa equipe para iniciar sua experiência
                 </p>
               </div>
-            </div>
-            <a href="#" data-toggle="modal" data-target="#register" class="btn btn-gradient btn-block-mobile btn-lg">Experimente por 30 dias</a>
-          </div>
-          <div class="col-lg-6"><img src="img/home-woman.png" alt="" class="hero-image img-fluid d-none d-lg-block"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Intro Section-->
-    <section class="bg-light p-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div id="clientsCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
-              <ol class="carousel-indicators">
-                  <li data-target="#clientsCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#clientsCarousel" data-slide-to="1"></li>
-                  <li data-target="#clientsCarousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row text-center">
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/ative.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/bancosemear.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/bigcard.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/bomsamaritano.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/toodoo.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/unicred.png" alt="Image" >
-                              </a>
-                          </div>
-                      </div>
+              <div class="col-12 mt-5">
+                <form id="register" class="text-left">
+                  <div class="form-row mb-4">
+                    <div class="col-12 mb-3">
+                      <label>Empresa</label>
+                      <input type="text" name="company" class="form-control" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label>Responsável</label>
+                      <input type="text" name="responsible" class="form-control" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label>E-mail</label>
+                      <input type="email" name="from_email" class="form-control" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label>Número de Colaboradores</label>
+                      <input type="number" name="employee_number" class="form-control" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label>Telefone (Celular): </label>
+                      <input type="text" name="phone" class="form-control" required>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-gradient btn-block-mobile"> Enviar </button>
+                    </div>
                   </div>
-                  <div class="carousel-item">
-                      <div class="row text-center">
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/bp.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/brio.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/inatel.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/oi.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/redehg.png" alt="Image" >
-                              </a>
-                          </div>
-                          <div class="col-md-2 mx-auto my-2 my-sm-0">
-                              <a href="#">
-                                  <img src="img/clients/sicoob.png" alt="Image" >
-                              </a>
-                          </div>
-                      </div>
-                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Divider Section-->
-    <section>
-      <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-4 mx-auto">
-              <h4> <strong>Equipes Fortes = Indivíduos Engajados</strong> </h4>
-              <p class="lead mt-4">Para desenvolver equipes fortes e obter resultados diferenciados, os gestores precisam contar com colaboradores engajados. A Fluxo utiliza dados simples e visuais que trazem assertividade e clareza no assunto, ajudando você a elevar a produtividade, a moral e o "presenteísmo" dos colaboradores.</p>
-            </div>
-            <div class="col-12 col-md-8 mx-auto">
-              <img src="img/sistema-primeiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
-            </div>
-          </div>
-      </div>
-    </section>
 
-    <section class="bg-light">
-      <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-8 mx-auto">
-                <img src="img/sistema-segundo.png" alt="Tela do sistema" class="img-fluid" />
-            </div>
-            <div class="col-12 col-md-4 mx-auto my-4 my-sm-0">
-              <h4> <strong>Experiência que Marca</strong> </h4>
-              <p class="lead mt-4">Da entrada à saída, gerencie o patrimônio mais importante de sua organização, construindo uma cultura de transparência, conﬁança e colaboração.</p>
-            </div>
-          </div>
-      </div>
-    </section>
+  <!-- navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container"><a href="./" class="navbar-brand"><img src="img/fluxo-logo.png" alt=""
+            class="img-fluid"></a>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right"><i class="fa fa-ellipsis-v ml-2 fa-2x"></i></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mt-2 mt-sm-0 ">
+              <a href="https://app.fluxo.live" target="_blank"
+                class="btn btn-gradient navbar-btn btn-block-mobile ml-0 ml-lg-3">
+                Acessar
+              </a>
+            </li>
+          </ul>
 
-    <section>
-      <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-4 mx-auto">
-              <h4> <strong>Transforme Gestores em Líderes</strong> </h4>
-              <p class="lead mt-4">Tome decisões mais assertivas contando com as nossas recomendações em AI (Inteligência Artiﬁcial). Oferecemos algoritmos, metodologia e ações que abordam os principais desaﬁos dos gestores atuais.</p>
-            </div>
-            <div class="col-12 col-md-8 mx-auto">
-              <img src="img/sistema-terceiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <!-- CLients Section-->
-    <section id="carousel" class="bg-light text-center">        			
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="quote"> <i class="fa fa-quote-left fa-3x mr-3"></i> <i class="fa fa-quote-right fa-3x"></i> </div>
-            <div class="carousel slide carousel-fade" id="fade-quote-carousel" data-ride="carousel" data-interval="4000">
-              <!-- Carousel indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-                <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
-                <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-              </ol>
-              <!-- Carousel items -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <blockquote>
-                    <p>Com a implantação do Fluxo, os nossos gestores passaram a ter dados para mensurar, acompanhar e agir nos fatores chaves que realmente elevam engajamento.</p>
-                  </blockquote>	
-                  <div class="profile-circle">
-                      <img src="img/clients/sicoob.png">
-                      <p>Dennis Franco - Diretor de RH</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <blockquote>
-                    <p>Eu nunca imaginei que poderia ter acesso a esse nível de informação em tão pouco tempo. Com menos de um dia - a equipe da Fluxo nos auxiliou na implantação, respondemos as pesquisas e minutos depois tínhamos um plano de ação claro e direcionado para os pontos que verdadeiramente importam para nossa equipe.</p>
-                  </blockquote>
-                  <div class="profile-circle">
-                    <img src="img/clients/brio.png">
-                    <p>Beatriz Santos - Diretora</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                
-                  <blockquote>
-                    <p>Hoje, através da Fluxo, sabemos exatamente aonde focar os nossos esforços. Enxergamos uma conexão direta entre o engajamento da nossa equipe e a satisfação dos nossos clientes.</p>
-                  </blockquote>
-                  <div class="profile-circle">
-                    <img src="img/clients/redehg.png">
-                    <p>Fernando Gomes - Diretoria</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  
-                  <blockquote>
-                    <p>Antes da Fluxo, utilizávamos técnicas manuais, impressas e atrasadas de gestão de pessoas. Os resultados não apontavam para lugar nenhum. A equipe ficava frustrada. E a tão esperada "mudança" virou motivo de chacota.</p>
-                  </blockquote>
-
-                  <div class="profile-circle">
-                    <img src="img/clients/unicred.png">
-                    <p>Daniel Lima - Gerência</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>							
         </div>
       </div>
-    </section>
-  
-    <!-- Get Started Section-->
-    <section class="bg-gradient-pre-footer text-white">
-      <div class="container text-center">
-        <h2>Torne a sua empresa mais humana. </h2>
-        <div class="row">
-          <div class="col-12 m-auto">
-            <p class="lead mt-2">Experimente a ferramenta que vem revolucionando o ambiente de trabalho por 30 dias gratuitos.</p>
-            <a href="#" data-toggle="modal" data-target="#register" class="btn btn-outline-light btn-lg btn-block-mobile">Experimente por 30 dias</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </nav>
+  </header>
 
-    <footer class="main-footer text-white">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="footer-logo"><img src="img/fluxo-logo.png" alt="..." class="img-fluid"></div>
-          </div>
-          <div class="col-lg-4 mb-5 mb-lg-0 text-center">
-            <strong> <i class="fa fa-whatsapp mr-3"></i>  +55 31 98466-3735 </strong>
-          </div>
-          <div class="col-lg-4 mb-5 mb-lg-0 text-center">
-            <a href="#" class="btn btn-outline-light btn-sm">ola@fluxapp.com</a>
-          </div>
-        </div>
-      </div>
-      <div class="copyrights">
-        <div class="container">
+  <!-- Hero Section-->
+  <section class="hero">
+    <div class="container mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="hero-heading mb-0">
+            <strong>Felicidade como estratégia.</strong>
+          </h2>
           <div class="row">
-            <div class="col-lg-6 text-center text-lg-left">
-              <p class="copyrights-text mb-2 mb-lg-0">&copy; Todos os direitos reservados - Fluxo</p>
+            <div class="col-lg-10">
+              <p class="lead text-muted mt-4 mb-4">
+                A Fluxo ajuda você a mapear a saúde do engajamento da sua equipe e a eliminar as barreiras que impedem
+                sua empresa de crescer. Analisamos pilares importantes para engajamento humano, cruzamos esses dados em
+                tempo real, e com assertividade, traçamos estratégias que tornam sua equipe mais produtiva, inovadora e
+                “presente”.
+              </p>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-              <ul class="list-inline social mb-0">
-                <li class="list-inline-item">
-                  <a href="#" class="social-link">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#" class="social-link">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="social-link">
-                    <i class="fa fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <a href="#" data-toggle="modal" data-target="#register"
+            class="btn btn-gradient btn-block-mobile btn-lg">Experimente Grátis</a>
+        </div>
+        <div class="col-lg-6"><img src="img/home-woman.png" alt="" class="hero-image img-fluid d-none d-lg-block"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section-->
+  <section class="bg-light p-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div id="clientsCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <ol class="carousel-indicators">
+              <li data-target="#clientsCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#clientsCarousel" data-slide-to="1"></li>
+              <li data-target="#clientsCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row text-center">
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/ative.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/bancosemear.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/bigcard.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/bomsamaritano.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/toodoo.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/unicred.png" alt="Image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row text-center">
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/bp.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/brio.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/inatel.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/oi.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/redehg.png" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-2 mx-auto my-2 my-sm-0">
+                    <a href="#">
+                      <img src="img/clients/sicoob.png" alt="Image">
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/lightbox2/js/lightbox.js"></script>
-    <script src="https://smtpjs.com/v2/smtp.js"></script>
-    <script src="js/front.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- Divider Section-->
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 mx-auto">
+          <h4> <strong>Escutar</strong> </h4>
+          <p class="lead mt-4">
+            Empodere sua equipe com um canal de feedback poderoso e capaz de transformar a cultura de
+            sua organização. Utilizamos pesquisas em pulso simples e intuitivas, a ﬁm de absorver o máximo de cada
+            resposta.
+          </p>
+        </div>
+        <div class="col-12 col-md-8 mx-auto">
+          <img src="img/sistema-primeiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-8 mx-auto">
+          <img src="img/sistema-segundo.png" alt="Tela do sistema" class="img-fluid" />
+        </div>
+        <div class="col-12 col-md-4 mx-auto my-4 my-sm-0">
+          <h4> <strong>Analisar</strong> </h4>
+          <p class="lead mt-4">
+            A Fluxo avalia, em tempo real, mais de 180 fatores cruciais para um ambiente de trabalho engajador, tais
+            como função, liderança, equipe e perspectivas de crescimento. Cruzamos esses dados e com assertividade
+            ranqueamos as métricas, destacando o real cenário de sua empresa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 mx-auto">
+          <h4> <strong>Impactar</strong> </h4>
+          <p class="lead mt-4">
+            Tome decisões mais assertivas contando com as nossas recomendações em AI (Inteligência Artiﬁcial) e
+            especialistas de plantão. Oferecemos expertise, métricas e ações que abordam os principais desaﬁos dos
+            gestores atuais.
+          </p>
+        </div>
+        <div class="col-12 col-md-8 mx-auto">
+          <img src="img/sistema-terceiro.png" alt="Tela do sistema" class="img-fluid flip-image-sistema" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLients Section-->
+  <section id="carousel" class="bg-light text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="quote"> <i class="fa fa-quote-left fa-3x mr-3"></i> <i class="fa fa-quote-right fa-3x"></i> </div>
+          <div class="carousel slide carousel-fade" id="fade-quote-carousel" data-ride="carousel" data-interval="4000">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <blockquote>
+                  <p>Com a implantação do Fluxo, os nossos gestores passaram a ter dados para mensurar, acompanhar e
+                    agir nos fatores chaves que realmente elevam engajamento.</p>
+                </blockquote>
+                <div class="profile-circle">
+                  <img src="img/clients/sicoob.png">
+                  <p>Dennis Franco - Diretor de RH</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  <p>Eu nunca imaginei que poderia ter acesso a esse nível de informação em tão pouco tempo. Com menos
+                    de um dia - a equipe da Fluxo nos auxiliou na implantação, respondemos as pesquisas e minutos depois
+                    tínhamos um plano de ação claro e direcionado para os pontos que verdadeiramente importam para nossa
+                    equipe.</p>
+                </blockquote>
+                <div class="profile-circle">
+                  <img src="img/clients/brio.png">
+                  <p>Beatriz Santos - Diretora</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+
+                <blockquote>
+                  <p>Hoje, através da Fluxo, sabemos exatamente aonde focar os nossos esforços. Enxergamos uma conexão
+                    direta entre o engajamento da nossa equipe e a satisfação dos nossos clientes.</p>
+                </blockquote>
+                <div class="profile-circle">
+                  <img src="img/clients/redehg.png">
+                  <p>Fernando Gomes - Diretoria</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+
+                <blockquote>
+                  <p>Antes da Fluxo, utilizávamos técnicas manuais, impressas e atrasadas de gestão de pessoas. Os
+                    resultados não apontavam para lugar nenhum. A equipe ficava frustrada. E a tão esperada "mudança"
+                    virou motivo de chacota.</p>
+                </blockquote>
+
+                <div class="profile-circle">
+                  <img src="img/clients/unicred.png">
+                  <p>Daniel Lima - Gerência</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started Section-->
+  <section class="bg-gradient-pre-footer text-white">
+    <div class="container text-center">
+      <h2>Torne a sua empresa mais humana. </h2>
+      <div class="row mt-5">
+        <div class="col-12 m-auto">
+          <a href="#" data-toggle="modal" data-target="#register" class="btn btn-outline-light btn-lg btn-block-mobile">
+            Experimente Grátis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="footer-logo"><img src="img/fluxo-logo.png" alt="..." class="img-fluid"></div>
+        </div>
+        <div class="col-lg-4 mb-5 mb-lg-0 text-center">
+          <strong> <i class="fa fa-whatsapp mr-3"></i> +55 31 98466-3735 </strong>
+        </div>
+        <div class="col-lg-4 mb-5 mb-lg-0 text-center">
+          <a href="#" class="btn btn-outline-light btn-sm">ola@fluxapp.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-left">
+            <p class="copyrights-text mb-2 mb-lg-0">&copy; Fluxo</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-right">
+            <ul class="list-inline social mb-0">
+              <li class="list-inline-item">
+                <a href="#" class="social-link">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript files-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_Pr93MWrsu7l5NWXsoGNvv");
+    })();
+  </script>
+  <script src="js/front.js"></script>
+</body>
+
 </html>
