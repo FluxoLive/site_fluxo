@@ -70,6 +70,7 @@ $(function () {
         myform[0].reset()
         btn.text("OBRIGADO! Entraremos em contato").attr('disabled', true).removeClass('btn-gradient').addClass('btn-success');
         setTimeout(() => {
+          btn.text("Enviar").removeClass('btn-success').addClass('btn-gradient').removeAttr('disabled')
           $("#modal-register").modal('hide');
         }, 3000)
       }, function (err) {

@@ -8,20 +8,13 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
-  <!-- Bootstrap CSS-->
   <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <!-- Font Awesome CSS-->
   <link href="//fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <!-- Animate -->
   <link rel="stylesheet" href="css/animate.css">
-  <!-- theme stylesheet-->
   <link rel="stylesheet" href="css/style.sea.css" id="theme-stylesheet">
-  <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="css/custom.css">
-  <!-- Favicon-->
   <link rel="shortcut icon" href="img/favicon.png">
-
 </head>
 
 <body>
@@ -61,7 +54,7 @@
                     </div>
                     <div class="col-12 mb-3">
                       <label>Número de Colaboradores</label>
-                      <input type="number" name="employee_number" class="form-control" required>
+                      <input type="number" min="0" name="employee_number" class="form-control" required>
                     </div>
                     <div class="col-12 mb-3">
                       <label>Telefone (Celular): </label>
@@ -79,7 +72,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- navbar-->
   <header class="header">
@@ -185,21 +177,19 @@
     </div>
   </section>
 
-  <!-- CLients Section-->
+  <!-- 
   <section id="carousel" class="bg-light text-center">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="quote"> <i class="fa fa-quote-left fa-3x mr-3"></i> <i class="fa fa-quote-right fa-3x"></i> </div>
           <div class="carousel slide carousel-fade" id="fade-quote-carousel" data-ride="carousel" data-interval="4000">
-            <!-- Carousel indicators -->
             <ol class="carousel-indicators">
               <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
               <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
               <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
               <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
             </ol>
-            <!-- Carousel items -->
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <blockquote>
@@ -253,6 +243,7 @@
       </div>
     </div>
   </section>
+  CLients Section-->
 
   <!-- Get Started Section-->
   <section class="bg-gradient-pre-footer text-white">
