@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: #2f2f2f;
@@ -251,4 +256,18 @@ nav.navbar.active {
 .carousel-item img:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+.owl-stage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-item .item img{
+  border: none !important;
+}
+.superscript { 
+  position: relative; 
+  top: -0.5em; 
+  font-size: 60%; 
 }
