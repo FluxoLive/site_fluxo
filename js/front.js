@@ -1,37 +1,10 @@
-$(function() {
-  // ------------------------------------------------------ //
-  // For demo purposes, can be deleted
-  // ------------------------------------------------------ //
-
-  var stylesheet = $("link#theme-stylesheet");
-  $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
-  var alternateColour = $("link#new-stylesheet");
-
-  if ($.cookie("theme_csspath")) {
-    alternateColour.attr("href", $.cookie("theme_csspath"));
-  }
-
-  $("#colour").change(function() {
-    if ($(this).val() !== "") {
-      var theme_csspath = "css/style." + $(this).val() + ".css";
-
-      alternateColour.attr("href", theme_csspath);
-
-      $.cookie("theme_csspath", theme_csspath, {
-        expires: 365,
-        path: document.URL.substr(0, document.URL.lastIndexOf("/"))
-      });
-    }
-
-    return false;
-  });
-
+$(function () {
   // =====================================================
   //      NAVBAR
   // =====================================================
   var c,
     currentScrollTop = 0;
-  $(window).on("scroll load", function() {
+  $(window).on("scroll load", function () {
     if ($(window).scrollTop() >= 100) {
       $(".navbar").addClass("active");
     } else {
@@ -54,7 +27,7 @@ $(function() {
   // =====================================================
   //      PREVENTING URL UPDATE ON NAVIGATION LINK
   // =====================================================
-  $(".link-scroll").on("click", function(e) {
+  $(".link-scroll").on("click", function (e) {
     var anchor = $(this);
     $("html, body")
       .stop()
@@ -64,7 +37,6 @@ $(function() {
         },
         1000
       );
-
     e.preventDefault();
   });
 
@@ -79,24 +51,28 @@ $(function() {
   // =====================================================
   //      pulse botão
   // =====================================================
-  $(".btn").on("mouseover mouseout", function() {
+  $(".btn").on("mouseover mouseout", function () {
     $(this).toggleClass("animated pulse");
   });
 
-  /**
-   * Email Trello
-   * edsonmallet+qqhmypnuzuvgnppzyini@boards.trello.com
-   */
-  $("#formParceiro").submit(function(e) {
-    e.preventDefault();
-    Email.send({
-      Host: "smtp.yourisp.com",
-      Username: "username",
-      Password: "password",
-      To: "them@website.com",
-      From: "you@isp.com",
-      Subject: "This is the subject",
-      Body: "And this is the body"
-    }).then(message => alert(message));
+  var myform = $("form#register");
+  myform.on('submit', function (event) {
+    event.preventDefault();
+    console.log(event)
+
+    // Change to your service ID, or keep using the default service
+    var service_id = "trello";
+    var template_id = "trello";
+
+    myform.find("button").text("Sending...");
+    emailjs.sendForm(service_id, template_id, myform[0])
+      .then(function () {
+        alert("Sent!");
+        myform.find("button").text("Send");
+      }, function (err) {
+        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+        myform.find("button").text("Send");
+      });
+    return false;
   });
 });
