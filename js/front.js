@@ -63,8 +63,29 @@ $(function () {
         field.mask(SPMaskBehavior.apply({}, arguments), options);
       }
     };
-
   $('.phone').mask(SPMaskBehavior, spOptions);
+
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 3,
+        nav: false
+      },
+      1000: {
+        items: 5,
+        nav: true,
+        loop: false
+      }
+    }
+  })
 
   var myform = $("form#register");
   myform.on('submit', function (event) {
