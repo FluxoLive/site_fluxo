@@ -63,18 +63,19 @@ $(function () {
     var service_id = "trello";
     var template_id = "trello";
 
-    myform.find("button").text("Enviando...");
+    var btn = myform.find("button")
+    btn.text("Enviando...");
     emailjs.sendForm(service_id, template_id, myform[0])
       .then(function () {
         myform[0].reset()
-        myform.find("button").text("OBRIGADO!").attr('disabled').removeClass('btn-gradient').addClass('btn-success');
+        btn.text("OBRIGADO! Entraremos em contato").attr('disabled', true).removeClass('btn-gradient').addClass('btn-success');
         setTimeout(() => {
           $("#modal-register").modal('hide');
         }, 3000)
       }, function (err) {
-        myform.find("button").text("Ocorreu um erro! Tente novamente").attr('disabled').removeClass('btn-gradient').addClass('btn-danger');
+        btn.text("Ocorreu um erro! Tente novamente").attr('disabled', true).removeClass('btn-gradient').addClass('btn-danger');
         setTimeout(() => {
-          myform.find("button").text("Enviar").removeClass('btn-danger').addClass('btn-gradient').removeAttr('disabled')
+          btn.text("Enviar").removeClass('btn-danger').addClass('btn-gradient').removeAttr('disabled')
         }, 3000)
 
       });
