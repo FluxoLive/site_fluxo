@@ -66,7 +66,7 @@ $(function () {
     myform.find("button").text("Enviando...");
     emailjs.sendForm(service_id, template_id, myform[0])
       .then(function () {
-        myform.reset()
+        myform[0].reset()
         myform.find("button").text("OBRIGADO!").attr('disabled').removeClass('btn-gradient').addClass('btn-success');
       }, function (err) {
         myform.find("button").text("Ocorreu um erro! Tente novamente").attr('disabled').removeClass('btn-gradient').addClass('btn-danger');
