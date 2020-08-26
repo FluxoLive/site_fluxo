@@ -64,7 +64,7 @@ $(function () {
     var template_id = "trello";
 
     var btn = myform.find("button")
-    btn.text("Enviando...");
+    btn.text("Enviando...").attr('disabled', true)
     emailjs.sendForm(service_id, template_id, myform[0])
       .then(function () {
         myform[0].reset()
