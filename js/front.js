@@ -55,6 +55,17 @@ $(function () {
     $(this).toggleClass("animated pulse");
   });
 
+  var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+    spOptions = {
+      onKeyPress: function (val, e, field, options) {
+        field.mask(SPMaskBehavior.apply({}, arguments), options);
+      }
+    };
+
+  $('.phone').mask(SPMaskBehavior, spOptions);
+
   var myform = $("form#register");
   myform.on('submit', function (event) {
     event.preventDefault();
@@ -70,8 +81,9 @@ $(function () {
         myform[0].reset()
         btn.text("OBRIGADO! Entraremos em contato").attr('disabled', true).removeClass('btn-gradient').addClass('btn-success');
         setTimeout(() => {
-          btn.text("Enviar").removeClass('btn-success').addClass('btn-gradient').removeAttr('disabled')
-          $("#modal-register").modal('hide');
+          btn.text("Enviar").removeClass('btn-success').addClass('btn-gradient').removeAttr('disabled').then(() => {
+            $("#modal-register").modal('hide');
+          })
         }, 3000)
       }, function (err) {
         btn.text("Ocorreu um erro! Tente novamente").attr('disabled', true).removeClass('btn-gradient').addClass('btn-danger');
